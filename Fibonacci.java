@@ -1,6 +1,9 @@
+import java.util.Scanner;
 pubic class Fibonacci {
 	public static void main(String args[]) {
-		int[] sequence = new int[10];
+		Scanner s = new Scanner(System.in);
+		System.out.print("How many numbers of the Fibonacci sequence do you want to see? ");
+		int[] sequence = new int[s.nextInt()];
 		for(int i = 0; i < sequence.length; i++) {
 			if(i < 2) {
 				sequence[i] = 1;
