@@ -34,9 +34,13 @@ public class Credit {
 	public static void main(String args[]) {
 		Credit card = new Credit();
 		Scanner s = new Scanner(System.in);
-		// Prompt the user for a credit card no.
-		System.out.print("Enter a credit card number: ");
-		long cardNo = s.nextLong();
+		long cardNo = 0;
+		try {
+			// Prompt the user for a credit card no.
+			System.out.print("Enter a credit card number: ");
+			cardNo = s.nextLong();
+		}
+		catch(java.util.InputMismatchException e) {}
 		// Checks if card no. is valid
 		if(card.validate(cardNo) == false) {
 			System.out.println("INVALID");
