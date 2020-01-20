@@ -54,7 +54,7 @@ public class Credit {
 				 * MasterCard cards have 16 digits and the first 2 digits are between 51 and 55 (those included)
 				 * Visa cards have either 13 or 16 digits and always start with a 4
 				 *
-				 * (MasterCard cards can also use some other starting numbers, but I've not included those.
+				 * (MasterCard cards can also use some other starting numbers, but I've not included those.)
 				 */
 				case 13:
 					cardNo /= 1000000000000L;					// 12 zeros; gets the first digit
