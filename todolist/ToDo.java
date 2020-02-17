@@ -82,7 +82,18 @@ public class ToDo {
 				s.nextLine();
 				switch(option) {
 				case 1:
-					System.out.println("1");
+					try {
+						Scanner scan = new Scanner(file);
+						System.out.println();
+						int i = 1;
+						while(scan.hasNextLine()) {
+							System.out.println(i + " - " + scan.nextLine());
+							i++;
+						}
+					}
+					catch(FileNotFoundException e) {								// Should never get thrown
+						System.out.println(e.getMessage());
+					}
 					break;
 				case 2:
 					System.out.println("2");
